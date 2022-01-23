@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section>
+        <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONANLITY</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label>ENTER YOUR NAME</label><br>
+                <input type="text" name="" id="nameid">
+            </div>
+
+            <div class="imgdiv">
+                <img src="pic.jpg" alt="" width="200" height="200" class="imgchange">
+            </div>
+
+            <button>Click Me</button>
+        </div>
+    </section>
+
+
+    <!-- here jQuery cdn link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+       $(document).ready(function(){
+           $('button').click(function(){
+               const a = $('#nameid').val();
+               alert(a);
+
+               $('.imgchange').attr('src', `https://joeschmoe.io/api/v1/${a}` );
+           });
+       });
+    </script>
+</body>
+</html>
